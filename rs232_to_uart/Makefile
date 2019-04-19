@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := rs232
+PROJECT_NAME := rs232_to_uart
 
 include $(IDF_PATH)/make/project.mk
 

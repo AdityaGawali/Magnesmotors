@@ -6,6 +6,9 @@
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
 */
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
@@ -16,14 +19,14 @@
 
 static const int RX_BUF_SIZE = 1024;
 
-#define TXD_PIN (5)
-#define RXD_PIN (4)
+#define TXD_PIN (17)
+#define RXD_PIN (16)
 
-void init() {
+void init_uart() {
     const uart_config_t uart_config = {
         .baud_rate = 115200,
         .data_bits = UART_DATA_8_BITS,
-        .parity = UART_PARITY_DISABLE,
+        .parity    = UART_PARITY_DISABLE,
         .stop_bits = UART_STOP_BITS_1,
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
     };
@@ -32,13 +35,12 @@ void init() {
     // We won't use a buffer for sending data.
     uart_driver_install(UART_NUM_2, RX_BUF_SIZE * 2, 0, 0, NULL, 0);
     printf("init_uart error = %d\t ENDS\n", uart_error);
-
 }
 
 // int sendData(const char* logName, const char* data)
 // {
     // const int len = strlen(data);
-    // const int txBytes = uart_write_bytes(UART_NUM_2, data, len);
+    // const int txBytes = uart_write_bytes(UART_NUM_1, data, len);
     // ESP_LOGI(logName, "Wrote %d bytes", txBytes);
     // return txBytes;
 // }
@@ -53,39 +55,43 @@ void init() {
     // }
 // }
 
-static void rx_task()
-{
-    static const char *RX_TASK_TAG = "RX_TASK";
-    esp_log_level_set(RX_TASK_TAG, ESP_LOG_INFO);
-    uint8_t* data = (uint8_t*) malloc(RX_BUF_SIZE+1);
-    while (1) 
-    {
-        // int len = uart_read_bytes(UART_NUM_2, data_buffer, RX_BUF_SIZE, 20 / portTICK_RATE_MS);
-        // int buffer_offset = 0 ;
-        // printf("OUT\n");    
-        int rxBytes = uart_read_bytes(UART_NUM_2, data, RX_BUF_SIZE, 100 / portTICK_RATE_MS);
-        if (rxBytes > 0) {
-            printf("IN\n");
-            data[rxBytes] = 0;
-            ESP_LOGI(RX_TASK_TAG, "Read %d bytes: '%s'", rxBytes, data);
-            ESP_LOG_BUFFER_HEXDUMP(RX_TASK_TAG, data, rxBytes, ESP_LOG_INFO);
-        	// printf("%c",data[1]);
-        
-        }
-        // while(len--){
-            // char command = *(data_buffer + buffer_offset);
-            // printf("UART Data received : %c\n",command);
-            // vTaskDelay(100 / portTICK_RATE_MS);
-            // buffer_offset++;
+// static void rx_task()
+// {
+    // static const char *RX_TASK_TAG = "RX_TASK";
+    // esp_log_level_set(RX_TASK_TAG, ESP_LOG_INFO);
+    // uint8_t* data = (uint8_t*) malloc(RX_BUF_SIZE+1);
+    // while (1) 
+    // {
+        // const int rxBytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
+        // if (rxBytes > 0) {
+            // data[rxBytes] = 0;
+            // ESP_LOGI(RX_TASK_TAG, "Read %d bytes: '%s'", rxBytes, data);
+            // ESP_LOG_BUFFER_HEXDUMP(RX_TASK_TAG, data, rxBytes, ESP_LOG_INFO);
+        	// printf(data[1]);
         // }
+    // }
+    // free(data);
+// }
 
+void read_rx(uint8_t* data_buffer){
+    while(true){
+        int len = uart_read_bytes(UART_NUM_2, data_buffer, RX_BUF_SIZE, 20 / portTICK_RATE_MS);
+        int buffer_offset = 0 ;
+        // printf("HERE\n");
+      
+        while(len--){
+            char command = *(data_buffer + buffer_offset);
+            printf("UART Data received : %c\n",command);
+            vTaskDelay(100 / portTICK_RATE_MS);
+            buffer_offset++;
+        }
     }
-    free(data);
-}
 
+}
 void app_main()
 {
-    init();
-    xTaskCreate(rx_task, "uart_rx_task", 2048, NULL, 23, NULL);
+    init_uart();    
+    uint8_t *uart_rx_buffer = (uint8_t *) malloc(RX_BUF_SIZE);
+    xTaskCreate(read_rx, "uart_rx_task", 2048, &uart_rx_buffer, 23, NULL);
     //xTaskCreate(tx_task, "uart_tx_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
 }
