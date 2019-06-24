@@ -30,7 +30,11 @@ Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
 The server has to read Sec-WebSocket-Key, concatinate the magic string ```258EAFA5-E914-47DA-95CA-C5AB0DC85B11``` to it, take the SHA1 of it, and return the base64 encoded result to the client For acknowledgement as Handshake.
 
 
-##### Tasks:
-1. DAC on esp32
-2. RS232 serial communication on esp32
-3. CAN communication between multiple esp32
+##### Tasks completed:
+1. UART communication with BMS hardware
+2. Transmiting the data from UART to CAN (Code needs to modified)
+
+##### Tasks remaining:
+1. Sending Data to CAN from UART
+2. Sending Data to Webpage from UART
+3. Merging CAN and WiFi

@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := 14_basic_webserver
+PROJECT_NAME := rs232
 
 include $(IDF_PATH)/make/project.mk
 

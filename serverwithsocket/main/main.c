@@ -19,6 +19,7 @@
 #include "lwip/sockets.h"
 #include "lwip/sys.h"
 #include <lwip/netdb.h>
+#include "driver/gpio.h"
 
 #include "WebSocket_Task.h"
 
@@ -59,12 +60,18 @@ void task_process_WebSocket( void *pvParameters ){
             //write frame inforamtion to UART
             printf("New Websocket frame. Length %d, payload %.*s \r\n", __RX_frame.payload_length, __RX_frame.payload_length, __RX_frame.payload);
             data_buf = __RX_frame.payload;
-            if(strcmp(data_buf,"fast") == 0)
+            if(strcmp(data_buf,"slow") == 0)
             {
-            	dac_output_voltage(DAC_CHANNEL_1, 255);
-            }
-            else
             	dac_output_voltage(DAC_CHANNEL_1, 0);
+            }
+            else if(strcmp(data_buf,"medium") == 0)
+            {
+                dac_output_voltage(DAC_CHANNEL_1, 128);
+            }
+            else if(strcmp(data_buf,"fast") == 0)
+            {
+                dac_output_voltage(DAC_CHANNEL_1, 255);
+            }
 
 
             //loop back frame
