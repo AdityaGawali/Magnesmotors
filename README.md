@@ -32,7 +32,7 @@ The server has to read Sec-WebSocket-Key, concatinate the  string ```258EAFA5-E9
 
 ##### Tasks completed:
 1. UART communication with BMS hardware
-2. Transmiting the data from UART to CAN (Code needs to modified)
+2. Transmiting the data from UART to CAN 
 
 ##### Tasks remaining:
 1. Sending Data to CANBUS  (Testing)
