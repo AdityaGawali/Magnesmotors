@@ -45,3 +45,4 @@ The server has to read Sec-WebSocket-Key, concatinate the  string ```258EAFA5-E9
 3. [rs232withcan](https://github.com/AdityaGawali/Magnesmotors/tree/master/rs232withcan) : UART with CAN bus communication,needs modification in code.
 4. [serverwithrs232withcan](https://github.com/AdityaGawali/Magnesmotors/tree/master/serverwithrs232withcan) : UART communication along with transmission to CAN bus and Wifi client.
 5. [serverwithsocket](https://github.com/AdityaGawali/Magnesmotors/tree/master/serverwithsocket) : Wifi Server setup with Websocket communication with client.
+6. [Hardware](https://github.com/AdityaGawali/Magnesmotors/tree/master/Hardware) : Contains PCB and gerber files along with pin usage and components of the board.
