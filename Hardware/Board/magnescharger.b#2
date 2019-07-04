@@ -169,8 +169,8 @@
 <text x="14.1" y="0.9" size="1.778" layer="25">SW</text>
 <text x="40.9" y="25.8" size="1.27" layer="25" rot="R90">330Ω</text>
 <text x="44.7" y="25.8" size="1.27" layer="25" rot="R90">3.3KΩ</text>
-<text x="60.8" y="43" size="1.27" layer="25" rot="R90">10KΩ</text>
-<text x="56.4" y="42.6" size="1.27" layer="25" rot="R90">3.3KΩ</text>
+<text x="56.3" y="43" size="1.27" layer="25" rot="R90">10KΩ</text>
+<text x="60.8" y="43" size="1.27" layer="25" rot="R90">3.3KΩ</text>
 <text x="76.3" y="22.7" size="1.778" layer="25" rot="R90">UTX</text>
 <text x="76.3" y="28.3" size="1.778" layer="25" rot="R90">URX</text>
 <text x="76.3" y="38.1" size="1.778" layer="25" rot="R270" align="top-right">AVO</text>
@@ -184,7 +184,7 @@
 <text x="-2.3" y="42.8" size="1.9304" layer="25">MAGNES MOTORS,
 INDIA</text>
 <dimension x1="-4.5" y1="52.6" x2="77.3" y2="52.6" x3="36.4" y3="54.5" textsize="1.778" layer="25"/>
-<dimension x1="77.3" y1="52.6" x2="77.3" y2="-1.5" x3="80.4" y3="25.55" textsize="1.778" layer="25" dtype="vertical"/>
+<dimension x1="77.3" y1="52.6" x2="77.3" y2="-1.5" x3="78.5" y3="25.55" textsize="1.778" layer="25" dtype="vertical"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
