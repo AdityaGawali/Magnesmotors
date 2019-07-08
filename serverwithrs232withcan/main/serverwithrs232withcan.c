@@ -50,6 +50,7 @@ typedef struct
     float current;
     float temp;
     uint16_t cell_voltage[14];
+    uint8_t chrg_mode;
 }bms_data_t;
 
 
@@ -83,7 +84,6 @@ const char cell_data[] = {0xDD,0xA5,0x04,0x00,0xFF,0xFC,0x77};
 const char hard_data[] = {0xDD,0xA5,0x05,0x00,0xFF,0xFB,0x77};
 
 
-uint16_t cell_voltage[14];
 
 
 
@@ -169,15 +169,16 @@ static void rx_task(bms_data_t* BMS)
             sendData(cell_data);
         }
 
+        TickType_t xStart;
+        TickType_t xDelay = 2000 / portTICK_PERIOD_MS;
+        xStart = xTaskGetTickCount();  
+        while(((xTaskGetTickCount - xStart)/portTICK_PERIOD_MS) < xDelay);
         //vTaskDelay(2000 / portTICK_PERIOD_MS);
 
         int rxbytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
         
         if(rxbytes == 34)
         {
-
-
-
             BMS->total_voltage = ((float)(((data[4]<<8) | data[5])*10)/1000);
             BMS->current = ((float)(((data[6]<<8) | data[7])*10)/1000);
             BMS->temp = data[30]*0.2;
@@ -187,7 +188,7 @@ static void rx_task(bms_data_t* BMS)
             printf("%f A\n", BMS->current );
 
         }
-        else if(rxbytes == 37)
+        else if(rxbytes == 35)
         {   
             for(int i =0;i<14;i++)
             {
@@ -199,7 +200,7 @@ static void rx_task(bms_data_t* BMS)
             }
             state = BASIC;
         }
-        else if(rxbytes == 17)
+        else if(rxbytes == 29)
         {   
 
             printf("%s\t","Hardware version: " );
@@ -217,48 +218,36 @@ static void rx_task(bms_data_t* BMS)
         {
             printf("%s\n",".");
         }
-        vTaskDelay(5000 / portTICK_PERIOD_MS);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
     }
     free(data);
 }
 
-static void can_task(bms_data_t* BMS)
-{
-    uint16_t voltage_temp = 0;
-    uint16_t current_temp = 0;
 
-    uint8_t voltage_HB = 0;
-    uint8_t voltage_LB = 0;
-    uint8_t current_HB = 0;
-    uint8_t current_LB = 0;
-    uint8_t temp_LB = 0;
-    while(1)
+static void can_task(bms_data_t* BMS)
+{   
+
+     while(1)
     {
         printf("%s\n","CAN");
-        voltage_temp = (BMS->total_voltage*100);
-        current_temp = (BMS->current*100);
-        temp_LB = (BMS->temp/0.2);
-
-        voltage_HB = 8>>voltage_temp;
-        voltage_LB = voltage_LB | voltage_temp;
-        
-        current_HB = 8>>current_temp;
-        current_LB = current_LB | current_temp;
-
-        
+        BMS->raw_total_voltage = (BMS->total_voltage*100);
+        BMS->raw_total_current = (BMS->current*100);
+        BMS->raw_temp = (BMS->temp/0.2);
 
         can_message_t message;
         message.identifier = 0xAAAA;
         message.flags = CAN_MSG_FLAG_EXTD;
-        message.data_length_code = 5;
-        message.data[0] =  voltage_HB; //HIGH BYTE
-        message.data[1] = voltage_LB; //LOW BYTE
-
-        message.data[2] =  current_HB; //HIGH BYTE
-        message.data[3] = current_LB;
-
-        message.data[4] = temp_LB;
-
+        message.data_length_code = 6;
+        for(int i = 0;i<6;i++)
+        {
+            message.data[i] = 0;
+        }
+        message.data[0] =  8>>BMS->raw_total_voltage;; //HIGH BYTE
+        message.data[1] = message.data[1] | BMS->raw_total_voltage; //LOW BYTE
+        message.data[2] =  8>>BMS->raw_total_current; //HIGH BYTE
+        message.data[3] = message.data[3] | BMS->raw_total_current;//LOW BYTE
+        message.data[4] = BMS->raw_temp;
+        message.data[5] = BMS->chrg_mode;
         if (can_transmit(&message, portMAX_DELAY) == ESP_OK) 
         {
             printf("%s\n","Message queued for CAN transmission");
@@ -268,7 +257,7 @@ static void can_task(bms_data_t* BMS)
             printf("%s\n","Failed to queue message for CANN transmission");
        
         }
-    vTaskDelay(5000/portTICK_PERIOD_MS);
+    vTaskDelay(3000/portTICK_PERIOD_MS);
     }
 }
 
@@ -299,6 +288,18 @@ void task_process_WebSocket(bms_data_t* BMS)
             //write frame inforamtion to UART
             printf("New Websocket frame. Length %d, payload %.*s \r\n", __RX_frame.payload_length, __RX_frame.payload_length, __RX_frame.payload);
             
+            if(strcmp("slow", __RX_frame.payload)==0)
+            {
+                BMS->chrg_mode = 0x32;
+            }
+            else if(strcmp("medium", __RX_frame.payload)==0)
+            {
+                BMS->chrg_mode = 0x64;
+            }
+            else if(strcmp("fast", __RX_frame.payload)==0)
+            {
+                BMS->chrg_mode = 0x96;
+            }
             gcvt(BMS->total_voltage,6,total_voltage_str);
             gcvt(BMS->current,6,current_str);
             gcvt(BMS->temp,6,temp_str);
@@ -315,7 +316,7 @@ void task_process_WebSocket(bms_data_t* BMS)
                 free(__RX_frame.payload);
 
         }
-        vTaskDelay(5000 / portTICK_PERIOD_MS);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
 
     }
 }
@@ -422,8 +423,8 @@ static void initialise_wifi(void)
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "Ajinkya",
-            .password = "ajinkya21",
+            .ssid = "SSID",
+            .password = "PASSWORD",
         },
     };
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
@@ -475,7 +476,7 @@ void app_main(void)
 
     xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
     xTaskCreatePinnedToCore(rx_task, "uart_rx_task", 2048, &BMS, 5, NULL,1);
-    //xTaskCreatePinnedToCore(can_task,"can_tx_task",2048,&BMS,5,NULL,1);
+    xTaskCreatePinnedToCore(can_task,"can_tx_task",2048,&BMS,5,NULL,1);
 
 
 

@@ -147,7 +147,7 @@ static void rx_task(bms_data_t* BMS)
             printf("%f A\n", BMS->current );
             state = CELL;
         }
-        else if(rxbytes == 37)
+        else if(rxbytes == 35)
         {   
             for(int i =0;i<14;i++)
             {
@@ -159,7 +159,7 @@ static void rx_task(bms_data_t* BMS)
             }
             state = BASIC;
         }
-        else if(rxbytes == 17)
+        else if(rxbytes == 29)
         {   
 
             printf("%s\t","Hardware version: " );
