@@ -168,15 +168,15 @@ static void rx_task(bms_data_t* BMS)
         {
             sendData(cell_data);
         }
-
+        printf("%s\n","wassap");
         TickType_t xStart;
         TickType_t xDelay = 2000 / portTICK_PERIOD_MS;
         xStart = xTaskGetTickCount();  
-        while(((xTaskGetTickCount - xStart)/portTICK_PERIOD_MS) < xDelay);
+        //while(((xTaskGetTickCount() - xStart)/portTICK_PERIOD_MS) < xDelay);
         //vTaskDelay(2000 / portTICK_PERIOD_MS);
 
         int rxbytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
-        
+        printf("%s\n","lolololo");
         if(rxbytes == 34)
         {
             BMS->total_voltage = ((float)(((data[4]<<8) | data[5])*10)/1000);
@@ -226,13 +226,17 @@ static void rx_task(bms_data_t* BMS)
 
 static void can_task(bms_data_t* BMS)
 {   
+    uint16_t raw_total_voltage = 0;
+    uint16_t raw_total_current = 0;
+    uint8_t raw_temp = 0;    
+
 
      while(1)
     {
         printf("%s\n","CAN");
-        BMS->raw_total_voltage = (BMS->total_voltage*100);
-        BMS->raw_total_current = (BMS->current*100);
-        BMS->raw_temp = (BMS->temp/0.2);
+        raw_total_voltage = (BMS->total_voltage*100);
+        raw_total_current = (BMS->current*100);
+        raw_temp = (BMS->temp/0.2);
 
         can_message_t message;
         message.identifier = 0xAAAA;
@@ -242,11 +246,11 @@ static void can_task(bms_data_t* BMS)
         {
             message.data[i] = 0;
         }
-        message.data[0] =  8>>BMS->raw_total_voltage;; //HIGH BYTE
-        message.data[1] = message.data[1] | BMS->raw_total_voltage; //LOW BYTE
-        message.data[2] =  8>>BMS->raw_total_current; //HIGH BYTE
-        message.data[3] = message.data[3] | BMS->raw_total_current;//LOW BYTE
-        message.data[4] = BMS->raw_temp;
+        message.data[0] =  8>>raw_total_voltage;; //HIGH BYTE
+        message.data[1] = message.data[1] | raw_total_voltage; //LOW BYTE
+        message.data[2] =  8>>raw_total_current; //HIGH BYTE
+        message.data[3] = message.data[3] | raw_total_current;//LOW BYTE
+        message.data[4] = raw_temp;
         message.data[5] = BMS->chrg_mode;
         if (can_transmit(&message, portMAX_DELAY) == ESP_OK) 
         {
@@ -300,22 +304,23 @@ void task_process_WebSocket(bms_data_t* BMS)
             {
                 BMS->chrg_mode = 0x96;
             }
-            gcvt(BMS->total_voltage,6,total_voltage_str);
-            gcvt(BMS->current,6,current_str);
-            gcvt(BMS->temp,6,temp_str);
-
-            total_voltage_str = concat("voltage ",total_voltage_str);
-            current_str = concat("current ",current_str);
-            temp_str = concat("temp ",temp_str);
-
-            WS_write_data(total_voltage_str,strlen(total_voltage_str));
-            WS_write_data(current_str,strlen(current_str));
-            WS_write_data(temp_str,strlen(temp_str));
 
             if (__RX_frame.payload != NULL)
                 free(__RX_frame.payload);
 
         }
+        gcvt(BMS->total_voltage,6,total_voltage_str);
+        gcvt(BMS->current,6,current_str);
+        gcvt(BMS->temp,6,temp_str);
+
+        total_voltage_str = concat("voltage ",total_voltage_str);
+        current_str = concat("current ",current_str);
+        temp_str = concat("temp ",temp_str);
+
+        WS_write_data(total_voltage_str,strlen(total_voltage_str));
+        WS_write_data(current_str,strlen(current_str));
+        WS_write_data(temp_str,strlen(temp_str));
+
         vTaskDelay(3000 / portTICK_PERIOD_MS);
 
     }
@@ -423,8 +428,8 @@ static void initialise_wifi(void)
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "SSID",
-            .password = "PASSWORD",
+            .ssid = "Ajinkya",
+            .password = "ajinkya21",
         },
     };
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
@@ -475,7 +480,7 @@ void app_main(void)
     
 
     xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(rx_task, "uart_rx_task", 2048, &BMS, 5, NULL,1);
+    xTaskCreatePinnedToCore(rx_task, "uart_rx_task", 2048, &BMS, 6, NULL,1);
     xTaskCreatePinnedToCore(can_task,"can_tx_task",2048,&BMS,5,NULL,1);
 
 

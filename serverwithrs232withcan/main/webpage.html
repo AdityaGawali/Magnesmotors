@@ -5,7 +5,7 @@
       <script type = "text/javascript">
  
          var ws = null;
-         var ip = "192.168.0.120"
+         var ip = "192.168.0.103"
          var port = "9998"
          var voltage = ""
          var current = ""
@@ -114,14 +114,7 @@
             document.getElementById("mediumbtn").disabled = false;
             document.getElementById("fastbtn").disabled = true;
           }
-          function getData(){
-            var textToSend = " ";
-            ws.send(textToSend);
-            document.getElementById("inputText").value = "";
-            
-          }
-          //setInterval(getData,3000);
-        
+
       </script>
  
    </head>
