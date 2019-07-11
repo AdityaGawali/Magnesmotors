@@ -29,21 +29,22 @@ static const can_general_config_t g_config = CAN_GENERAL_CONFIG_DEFAULT(CAN_TXD_
 void can_init()
 {   
     if (can_driver_install(&g_config, &t_config, &f_config) == ESP_OK){
-        printf("%s\n","driver installed");
+        printf("%s\n","CAN installed");
     } 
     else {
-        printf("%s\n","Driver not installed");
+        printf("%s\n","CAN not installed");
         return;
     }
 
     //Start CAN driver
     if (can_start() == ESP_OK) {
-        printf("%s\n","Driver started");
+        printf("%s\n","CAN started");
     } 
     else {
-        printf("%s\n","Failed to start driver");
+        printf("%s\n","Failed to start CAN");
         return;
     }
+    printf("%s\n","CAN initalised");
 }
 
 static void can_task(void * pvParameters)

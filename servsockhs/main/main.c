@@ -41,7 +41,7 @@
 #include "esp_event_loop.h"
 #include "nvs_flash.h"
 
-#include "WebSocket_Task.h"
+#include "../../components/WebsocketTask/WebSocket_Task.h"
 
 //WebSocket frame receive queue
 QueueHandle_t WebSocket_rx_queue;

@@ -5,8 +5,7 @@
       <script type = "text/javascript">
  
          var ws = null;
-         var ip = "192.168.0.103"
-         var port = "9998"
+         var ip = "192.168.0.103" //PASTE IP HERE IN QUOTES
          var voltage = ""
          var current = ""
          var temperature = ""
@@ -61,7 +60,7 @@
                   }
                   else if(message.data.includes("temp "))
                   {
-                    document.getElementById("temperature").innerHTML  = message.data + "C";
+                    document.getElementById("temperature").innerHTML  = message.data + "°C";
                   }
                   
 

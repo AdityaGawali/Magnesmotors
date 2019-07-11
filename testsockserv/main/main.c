@@ -18,7 +18,7 @@
 #include "lwip/sys.h"
 #include <lwip/netdb.h>
 
-#include "WebSocket_Task.h"
+#include "../../components/WebsocketTask/WebSocket_Task.h"
 
 
 const static char http_html_hdr[] = "HTTP/1.1 200 OK\nContent-type: text/html\n\n";

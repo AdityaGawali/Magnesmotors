@@ -14,13 +14,14 @@
 #include "esp_event_loop.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
+#include "esp_task_wdt.h"
 
 #include "lwip/api.h"
 #include "lwip/err.h"
 #include "lwip/sockets.h"
 #include "lwip/sys.h"
 #include <lwip/netdb.h>
-#include "driver/gpio.h"
+
 
 #include "../../components/WebsocketTask/WebSocket_Task.h"
 
@@ -53,7 +54,7 @@ typedef struct
     uint8_t chrg_mode;
 }bms_data_t;
 
-
+uint8_t tx_flag = 0;
 
 const static char http_html_hdr[] = "HTTP/1.1 200 OK\nContent-type: text/html\n\n";
 extern const uint8_t webpage_html_start[] asm("_binary_webpage_html_start");
@@ -89,8 +90,7 @@ const char hard_data[] = {0xDD,0xA5,0x05,0x00,0xFF,0xFB,0x77};
 
 char* concat(const char *s1, const char *s2)
 {
-    char *result = malloc(strlen(s1) + strlen(s2) + 1); // +1 for the null-terminator
-    // in real code you would check for errors in malloc here
+    char *result = malloc(strlen(s1) + strlen(s2) + 1); 
     strcpy(result, s1);
     strcat(result, s2);
     return result;
@@ -109,8 +109,8 @@ void uart_init()
     };
     uart_param_config(UART_NUM_1, &uart_config);
     uart_set_pin(UART_NUM_1, RS232_TXD_PIN, RS232_RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
-    // We won't use a buffer for sending data.
     uart_driver_install(UART_NUM_1, RX_BUF_SIZE * 2, 0, 0, NULL, 0);
+    printf("%s\n","UART initalised");
 }
 
 
@@ -118,31 +118,34 @@ void can_init()
 {   
     if (can_driver_install(&g_config, &t_config, &f_config) == ESP_OK) 
     {
-        printf("%s\n","driver installed");
+        printf("%s\n","CAN installed");
     } 
     else 
     {
-        printf("%s\n","Driver not installed");
+        printf("%s\n","CAN not installed");
         return;
     }
 
-    //Start CAN driver
     if (can_start() == ESP_OK) 
     {
-        printf("%s\n","Driver started");
+        printf("%s\n","CAN started");
     } 
     else 
     {
-        printf("%s\n","Failed to start driver");
+        printf("%s\n","Failed to start CAN");
         return;
     }
+    printf("%s\n","CAN initalised");
 }
 
-int sendData(const char* data)
+void sendData(const char* data, uint8_t flag)
 {
-    const int len = 7;
-    const int txBytes = uart_write_bytes(UART_NUM_1, data, len);
-    return txBytes;
+    if(flag == 0)
+    {
+        const int len = 7;
+        const int txBytes = uart_write_bytes(UART_NUM_1, data, len);
+        flag = 1;
+    }
 }
 
 
@@ -152,28 +155,23 @@ static void rx_task(bms_data_t* BMS)
     uint8_t* data = (uint8_t*) malloc(RX_BUF_SIZE+1);
     State state = HARDWARE;
     
-    
     while (1) 
     {   
         printf("%s\n","UART");
-        if(state == HARDWARE)
+        if(state == HARDWARE )
         {
-            sendData(hard_data);
+            sendData(hard_data,tx_flag);
         }
         else if(state == BASIC)
         {
-            sendData(basic_data);
+            sendData(basic_data,tx_flag);
         }
         else if(state == CELL)
         {
-            sendData(cell_data);
+            sendData(cell_data,tx_flag);
         }
-        printf("%s\n","wassap");
-        TickType_t xStart;
-        TickType_t xDelay = 2000 / portTICK_PERIOD_MS;
-        xStart = xTaskGetTickCount();  
-        //while(((xTaskGetTickCount() - xStart)/portTICK_PERIOD_MS) < xDelay);
-        //vTaskDelay(2000 / portTICK_PERIOD_MS);
+
+        vTaskDelay(2000 / portTICK_PERIOD_MS);
 
         int rxbytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
         printf("%s\n","lolololo");
@@ -186,7 +184,8 @@ static void rx_task(bms_data_t* BMS)
             printf("%f V\n",BMS->total_voltage);
             printf("%f C\n", BMS->temp );
             printf("%f A\n", BMS->current );
-
+            state = CELL;
+            tx_flag = 0;
         }
         else if(rxbytes == 35)
         {   
@@ -199,6 +198,7 @@ static void rx_task(bms_data_t* BMS)
                 printf("%d cell voltage: %d mV\n",i,BMS->cell_voltage[i]);
             }
             state = BASIC;
+            tx_flag = 0;
         }
         else if(rxbytes == 29)
         {   
@@ -213,10 +213,12 @@ static void rx_task(bms_data_t* BMS)
    
 
             state = BASIC;
+            tx_flag = 0;
         }
         else
         {
             printf("%s\n",".");
+            tx_flag = 0;
         }
         vTaskDelay(3000 / portTICK_PERIOD_MS);
     }
@@ -233,7 +235,7 @@ static void can_task(bms_data_t* BMS)
 
      while(1)
     {
-        printf("%s\n","CAN");
+        
         raw_total_voltage = (BMS->total_voltage*100);
         raw_total_current = (BMS->current*100);
         raw_temp = (BMS->temp/0.2);
@@ -285,7 +287,6 @@ void task_process_WebSocket(bms_data_t* BMS)
 
     while (1){
         //receive next WebSocket frame from queue
-        printf("%s\n","SOCKET");
         if(xQueueReceive(WebSocket_rx_queue,&__RX_frame, 3*portTICK_PERIOD_MS)==pdTRUE)
         {
 
@@ -428,8 +429,8 @@ static void initialise_wifi(void)
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "Ajinkya",
-            .password = "ajinkya21",
+            .ssid = "SSID",
+            .password = "password",
         },
     };
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
@@ -444,7 +445,6 @@ void app_main(void)
 {
 
     bms_data_t* BMS;
-     
 
     esp_log_level_set("wifi", ESP_LOG_NONE);
 
