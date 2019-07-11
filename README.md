@@ -34,17 +34,7 @@ The server has to read Sec-WebSocket-Key, concatinate the  string ```258EAFA5-E9
 ##### Tasks completed:
 1. UART communication with BMS hardware
 2. Transmiting the data from UART to CAN 
+3. Sending Data to CANBUS  (Testing)
+4. Sending Data to Webpage  
+5. Merging CAN and WiFi
 
-##### Tasks remaining:
-1. Sending Data to CANBUS  (Testing)
-2. Sending Data to Webpage  
-3. Merging CAN and WiFi
-
-##### Folder structure
-1. [rs232](https://github.com/AdityaGawali/Magnesmotors/tree/master/rs232) : Basic UART communication.
-3. [rs232withcan](https://github.com/AdityaGawali/Magnesmotors/tree/master/rs232withcan) : UART with CAN bus communication.
-4. [serverwithrs232withcan](https://github.com/AdityaGawali/Magnesmotors/tree/master/serverwithrs232withcan) : UART communication along with transmission to CAN bus and Wifi client.
-5. [serverwithsocket](https://github.com/AdityaGawali/Magnesmotors/tree/master/serverwithsocket) : Wifi Server setup with Websocket communication with client.
-6. [canwithdac](https://github.com/AdityaGawali/Magnesmotors/tree/master/canwithdac) : CAN bus communication for charger to control charging modes.
-7. [Hardware](https://github.com/AdityaGawali/Magnesmotors/tree/master/Hardware) : Contains PCB and gerber files along with pin usage and components of the board.
->>>>>>> 8c0fb6578ebea42b71330973c6edd243ff9546be
