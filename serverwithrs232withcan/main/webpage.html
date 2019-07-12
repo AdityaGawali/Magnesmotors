@@ -6,10 +6,11 @@
  
          var ws = null;
          var ip = "192.168.0.103" //PASTE IP HERE IN QUOTES
+         var port = 9998;
          var voltage = ""
          var current = ""
          var temperature = ""
- 
+         var id = 5;
          function OpenWebsocket() 
          {
  
@@ -21,14 +22,13 @@
                     document.getElementById("inputText").disabled = false;
                     document.getElementById("sendButton").disabled = false;
 
-                    document.getElementById("BMSbtn").disabled=false;
                     document.getElementById("slowbtn").disabled=false;
                     document.getElementById("mediumbtn").disabled=false;
                     document.getElementById("fastbtn").disabled=false;
 
                     document.getElementById("connectButton").disabled = true;
                     document.getElementById("disconnectButton").disabled = false;
-                    document.getElementById("CurrentMode").innerHTML  = "Current Mode: Connected";
+                    document.getElementById("ESPID").innerHTML = "ESP_ID: " + id;
                };
  
                ws.onclose = function() 
@@ -36,14 +36,14 @@
                     document.getElementById("inputText").disabled = true;
                     document.getElementById("sendButton").disabled = true;
 
-                    document.getElementById("BMSbtn").disabled=true;
                     document.getElementById("slowbtn").disabled=true;
                     document.getElementById("mediumbtn").disabled=true;
                     document.getElementById("fastbtn").disabled=true;
 
                     document.getElementById("connectButton").disabled = false;
                     document.getElementById("disconnectButton").disabled = true;
-                    document.getElementById("CurrentMode").innerHTML  = "Current Mode: Not Connected";
+                    document.getElementById("ESPID").innerHTML = "ESP_ID: ";
+
  
                     alert("Connection closed");
                };
@@ -130,14 +130,13 @@
          <button style="margin:5px;" onclick = "SendData()"  disabled = "true" id = "sendButton">SEND</button>
       </div>
       <div align="center">
-        <button style="margin:5px;" onclick = "getData()" disabled = "true" id ="BMSbtn">Data</button>
         <button style="margin:5px;" onclick = "SendSlowData()" disabled = "true" id ="slowbtn">SLOW</button>
         <button style="margin:5px;" onclick = "SendMediumData()" disabled = "true" id ="mediumbtn">MEDIUM</button>
         <button style="margin:5px;" onclick = "SendFastData()" disabled = "true" id ="fastbtn">FAST</button>
 
       </div>
       <div align="center">
-         <p id = "chargingMode">chargingMode ****</p>
+         <p id = "ESPID"> ESP_ID: </p>
       </div>
             <div align="center">
          <p id = "voltage">voltage ****</p>

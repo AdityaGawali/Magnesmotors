@@ -23,8 +23,7 @@
 #include <lwip/netdb.h>
 
 
-#include "../../components/WebsocketTask/WebSocket_Task.h"
-
+#include "WebSocket_Task.h"
 
 #include "driver/uart.h"
 #include "soc/uart_struct.h"
@@ -157,7 +156,6 @@ static void rx_task(bms_data_t* BMS)
     
     while (1) 
     {   
-        printf("%s\n","UART");
         if(state == HARDWARE )
         {
             sendData(hard_data,tx_flag);
@@ -174,7 +172,6 @@ static void rx_task(bms_data_t* BMS)
         vTaskDelay(2000 / portTICK_PERIOD_MS);
 
         int rxbytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
-        printf("%s\n","lolololo");
         if(rxbytes == 34)
         {
             BMS->total_voltage = ((float)(((data[4]<<8) | data[5])*10)/1000);
@@ -429,8 +426,8 @@ static void initialise_wifi(void)
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "SSID",
-            .password = "password",
+            .ssid = "Ajinkya",
+            .password = "ajinkya21",
         },
     };
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
