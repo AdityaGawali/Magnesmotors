@@ -53,6 +53,7 @@ static void can_task(void * pvParameters)
     dac_output_enable(DAC_CHANNEL_1);   
     while(1)
     {
+        
         can_message_t rx_msg;
         can_receive(&rx_msg, portMAX_DELAY);
         if (rx_msg.identifier == 0xAAAA)
@@ -64,11 +65,11 @@ static void can_task(void * pvParameters)
             }
             else if(mode == MEDIUM)
             {
-                dac_output_voltage(DAC_CHANNEL_1,128);
+                dac_output_voltage(DAC_CHANNEL_1,97);
             }    
             else if(mode == FAST)
             {
-                dac_output_voltage(DAC_CHANNEL_1,255);
+                dac_output_voltage(DAC_CHANNEL_1,200);
             }
         }
         vTaskDelay(1000/portTICK_PERIOD_MS);

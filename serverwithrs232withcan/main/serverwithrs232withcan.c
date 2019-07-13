@@ -31,6 +31,12 @@
 #include "driver/can.h"
 
 
+#define DEVICE_IP "192.168.1.121"
+#define DEVICE_GW "192.168.1.1"
+#define DEVICE_NETMASK "255.255.255.0"
+
+#define SSID "SSID"
+#define PASSWORD "PASSWD"
 
 #define RS232_TXD_PIN 18
 #define RS232_RXD_PIN 19
@@ -142,7 +148,7 @@ void sendData(const char* data, uint8_t flag)
     if(flag == 0)
     {
         const int len = 7;
-        const int txBytes = uart_write_bytes(UART_NUM_1, data, len);
+        uart_write_bytes(UART_NUM_1, data, len);
         flag = 1;
     }
 }
@@ -311,9 +317,9 @@ void task_process_WebSocket(bms_data_t* BMS)
         gcvt(BMS->current,6,current_str);
         gcvt(BMS->temp,6,temp_str);
 
-        total_voltage_str = concat("voltage ",total_voltage_str);
-        current_str = concat("current ",current_str);
-        temp_str = concat("temp ",temp_str);
+        total_voltage_str = concat("Voltage ",total_voltage_str);
+        current_str = concat("Current ",current_str);
+        temp_str = concat("Temp ",temp_str);
 
         WS_write_data(total_voltage_str,strlen(total_voltage_str));
         WS_write_data(current_str,strlen(current_str));
@@ -417,24 +423,33 @@ static void http_server(void *pvParameters) {
 
 static void initialise_wifi(void)
 {   
-    mac_address = (uint8_t*)malloc(6 * sizeof(uint8_t));
+    
     tcpip_adapter_init();
     wifi_event_group = xEventGroupCreate();
     ESP_ERROR_CHECK( esp_event_loop_init(event_handler, NULL) );
+
+    tcpip_adapter_ip_info_t ipInfo;
+    tcpip_adapter_dhcpc_stop(TCPIP_ADAPTER_IF_STA);
+    ip4addr_aton(DEVICE_IP, &ipInfo.ip);
+    ip4addr_aton(DEVICE_GW, &ipInfo.gw);
+    ip4addr_aton(DEVICE_NETMASK, &ipInfo.netmask);
+
+    ESP_ERROR_CHECK(tcpip_adapter_set_ip_info(TCPIP_ADAPTER_IF_STA, &ipInfo));
+
+
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
-    ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "Ajinkya",
-            .password = "ajinkya21",
+            .ssid = SSID,
+            .password = PASSWORD,
         },
     };
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
     ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
     ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
     ESP_ERROR_CHECK( esp_wifi_start() );
-    esp_wifi_get_mac(ESP_IF_WIFI_STA,mac_address);
+    
 }
 
 
@@ -461,15 +476,7 @@ void app_main(void)
     printf("IP Address:  %s\n", ip4addr_ntoa(&ip_info.ip));
     printf("Subnet mask: %s\n", ip4addr_ntoa(&ip_info.netmask));
     printf("Gateway:     %s\n", ip4addr_ntoa(&ip_info.gw)); 
-    printf("macAddress: \t"); 
-    for(int i = 0;i<6;i++)
-    {   
-        
-        printf("%X",mac_address[i]);
-
-    }
-    printf("\n");
-
+    
     // start the HTTP Server task
     xTaskCreatePinnedToCore(&http_server, "http_server", 2048, NULL, 5, NULL,0);
     //Create Websocket Server Task
@@ -477,8 +484,8 @@ void app_main(void)
     
 
     xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(rx_task, "uart_rx_task", 2048, &BMS, 6, NULL,1);
-    xTaskCreatePinnedToCore(can_task,"can_tx_task",2048,&BMS,5,NULL,1);
+    xTaskCreatePinnedToCore(&rx_task, "uart_rx_task", 2048, &BMS, 6, NULL,1);
+    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,5,NULL,1);
 
 
 

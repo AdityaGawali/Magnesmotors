@@ -5,12 +5,12 @@
       <script type = "text/javascript">
  
          var ws = null;
-         var ip = "192.168.0.103" //PASTE IP HERE IN QUOTES
+         var ip = "192.168.1.121" //PASTE IP HERE IN QUOTES
          var port = 9998;
          var voltage = ""
          var current = ""
          var temperature = ""
-         var id = 5;
+         
          function OpenWebsocket() 
          {
  
@@ -28,7 +28,6 @@
 
                     document.getElementById("connectButton").disabled = true;
                     document.getElementById("disconnectButton").disabled = false;
-                    document.getElementById("ESPID").innerHTML = "ESP_ID: " + id;
                };
  
                ws.onclose = function() 
@@ -42,7 +41,6 @@
 
                     document.getElementById("connectButton").disabled = false;
                     document.getElementById("disconnectButton").disabled = true;
-                    document.getElementById("ESPID").innerHTML = "ESP_ID: ";
 
  
                     alert("Connection closed");
@@ -50,15 +48,15 @@
                ws.onmessage = function(message) 
                {
 
-                  if(message.data.includes("voltage "))
+                  if(message.data.includes("Voltage "))
                   {
                     document.getElementById("voltage").innerHTML  = message.data + "V";
                   }
-                  else if(message.data.includes("current "))
+                  else if(message.data.includes("Current "))
                   {
                     document.getElementById("current").innerHTML  = message.data + "A";
                   }
-                  else if(message.data.includes("temp "))
+                  else if(message.data.includes("Temp "))
                   {
                     document.getElementById("temperature").innerHTML  = message.data + "°C";
                   }
@@ -136,16 +134,16 @@
 
       </div>
       <div align="center">
-         <p id = "ESPID"> ESP_ID: </p>
+         <p id = "ESPID"> ESP_ID: 1</p>
       </div>
             <div align="center">
-         <p id = "voltage">voltage ****</p>
+         <p id = "voltage">Voltage ****</p>
       </div>
             <div align="center">
-         <p id = "current">current ****</p>
+         <p id = "current">Current ****</p>
       </div>
             <div align="center">
-         <p id = "temperature">temp ****</p>
+         <p id = "temperature">Temp ****</p>
       </div>
    </body>
 </html>
