@@ -54,8 +54,8 @@ Contains the freeRTOS task and all necessary support
 #include "wifi_manager.h"
 #include "dns_server.h"
 
-#define DEVICE_IP "192.168.0.135"
-#define DEVICE_GW "192.168.0.1"
+#define DEVICE_IP "192.168.1.123"
+#define DEVICE_GW "192.168.1.1"
 #define DEVICE_NETMASK "255.255.255.0"
 
 /* objects used to manipulate the main queue of events */

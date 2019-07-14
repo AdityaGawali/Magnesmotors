@@ -1,5 +1,5 @@
 wifi_manager.o: \
- /home/aditya/esp/espcodes/softAP_server/main/wifi_manager.c \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.c \
  /home/aditya/esp/esp-idf/components/newlib/include/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/aditya/esp/esp-idf/components/newlib/include/newlib.h \
@@ -28,7 +28,7 @@ wifi_manager.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
@@ -131,10 +131,10 @@ wifi_manager.o: \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/errno.h \
- /home/aditya/esp/espcodes/softAP_server/main/json.h \
- /home/aditya/esp/espcodes/softAP_server/main/http_server.h \
- /home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h \
- /home/aditya/esp/espcodes/softAP_server/main/dns_server.h
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/json.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/dns_server.h
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -192,7 +192,7 @@ wifi_manager.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 
@@ -398,11 +398,11 @@ wifi_manager.o: \
 
 /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/errno.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/json.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/json.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/http_server.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/dns_server.h:
-/home/aditya/esp/espcodes/softAP_server/main/./wifi_manager.c:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/dns_server.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/./wifi_manager.c:

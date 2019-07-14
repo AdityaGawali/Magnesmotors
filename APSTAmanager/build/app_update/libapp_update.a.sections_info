@@ -1,4 +1,4 @@
-In archive /home/aditya/esp/espcodes/softAP_server/build/app_update/libapp_update.a:
+In archive /home/aditya/esp/espcodes/magnes/APSTAmanager/build/app_update/libapp_update.a:
 
 esp_ota_ops.o:     file format elf32-xtensa-le
 
@@ -181,13 +181,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  14 .debug_line   00000231  00000000  00000000  00000737  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 15 .debug_str    00000270  00000000  00000000  00000968  2**0
+ 15 .debug_str    00000276  00000000  00000000  00000968  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      0000003b  00000000  00000000  00000bd8  2**0
+ 16 .comment      0000003b  00000000  00000000  00000bde  2**0
                   CONTENTS, READONLY
- 17 .xtensa.info  00000038  00000000  00000000  00000c13  2**0
+ 17 .xtensa.info  00000038  00000000  00000000  00000c19  2**0
                   CONTENTS, READONLY
- 18 .xt.lit       00000010  00000000  00000000  00000c4b  2**0
+ 18 .xt.lit       00000010  00000000  00000000  00000c51  2**0
                   CONTENTS, RELOC, READONLY
- 19 .xt.prop      000000cc  00000000  00000000  00000c5b  2**0
+ 19 .xt.prop      000000cc  00000000  00000000  00000c61  2**0
                   CONTENTS, RELOC, READONLY

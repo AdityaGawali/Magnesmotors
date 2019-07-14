@@ -1,5 +1,5 @@
 serverwithrs232withcanwithmanager.o: \
- /home/aditya/esp/espcodes/softAP_server/main/serverwithrs232withcanwithmanager.c \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/serverwithrs232withcanwithmanager.c \
  /home/aditya/esp/esp-idf/components/newlib/include/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/aditya/esp/esp-idf/components/newlib/include/newlib.h \
@@ -28,7 +28,7 @@ serverwithrs232withcanwithmanager.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/aditya/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -134,7 +134,7 @@ serverwithrs232withcanwithmanager.o: \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/errno.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/netdb.h \
- /home/aditya/esp/espcodes/softAP_server/main/WebSocket_Task.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/WebSocket_Task.h \
  /home/aditya/esp/esp-idf/components/driver/include/driver/uart.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -171,8 +171,8 @@ serverwithrs232withcanwithmanager.o: \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  /home/aditya/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/aditya/esp/esp-idf/components/mdns/include/mdns.h \
- /home/aditya/esp/espcodes/softAP_server/main/http_server.h \
- /home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -230,7 +230,7 @@ serverwithrs232withcanwithmanager.o: \
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -442,7 +442,7 @@ serverwithrs232withcanwithmanager.o: \
 
 /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/netdb.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/WebSocket_Task.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/WebSocket_Task.h:
 
 /home/aditya/esp/esp-idf/components/driver/include/driver/uart.h:
 
@@ -516,7 +516,7 @@ serverwithrs232withcanwithmanager.o: \
 
 /home/aditya/esp/esp-idf/components/mdns/include/mdns.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/http_server.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h:
-/home/aditya/esp/espcodes/softAP_server/main/./serverwithrs232withcanwithmanager.c:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/./serverwithrs232withcanwithmanager.c:

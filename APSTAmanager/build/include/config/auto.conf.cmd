@@ -34,7 +34,7 @@ deps_config := \
 	/home/aditya/esp/esp-idf/components/app_update/Kconfig.projbuild \
 	/home/aditya/esp/esp-idf/components/bootloader/Kconfig.projbuild \
 	/home/aditya/esp/esp-idf/components/esptool_py/Kconfig.projbuild \
-	/home/aditya/esp/espcodes/softAP_server/main/Kconfig.projbuild \
+	/home/aditya/esp/espcodes/magnes/APSTAmanager/main/Kconfig.projbuild \
 	/home/aditya/esp/esp-idf/components/partition_table/Kconfig.projbuild \
 	/home/aditya/esp/esp-idf/Kconfig
 

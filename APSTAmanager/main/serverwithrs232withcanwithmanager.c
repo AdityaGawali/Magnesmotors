@@ -39,9 +39,6 @@
 #include "wifi_manager.h"
 
 
-#define DEVICE_IP "192.168.1.121"
-#define DEVICE_GW "192.168.1.1"
-#define DEVICE_NETMASK "255.255.255.0"
 
 #define SSID "SSID"
 #define PASSWORD "PASSWD"
@@ -438,9 +435,9 @@ static void initialise_wifi(void)
 
     tcpip_adapter_ip_info_t ipInfo;
     tcpip_adapter_dhcpc_stop(TCPIP_ADAPTER_IF_STA);
-    ip4addr_aton(DEVICE_IP, &ipInfo.ip);
-    ip4addr_aton(DEVICE_GW, &ipInfo.gw);
-    ip4addr_aton(DEVICE_NETMASK, &ipInfo.netmask);
+    ip4addr_aton("192.168.0.123", &ipInfo.ip);
+    ip4addr_aton("192.168.0.1", &ipInfo.gw);
+    ip4addr_aton("255.255.255.0", &ipInfo.netmask);
 
     ESP_ERROR_CHECK(tcpip_adapter_set_ip_info(TCPIP_ADAPTER_IF_STA, &ipInfo));
 
@@ -459,8 +456,24 @@ static void initialise_wifi(void)
     ESP_ERROR_CHECK( esp_wifi_start() );
     
 }
+bms_data_t* BMS;
 void cb_connection_ok(void *pvParameter){
 	ESP_LOGI(TAG, "I have a connection!");
+	tcpip_adapter_ip_info_t ip_info;
+    ESP_ERROR_CHECK(tcpip_adapter_get_ip_info(TCPIP_ADAPTER_IF_STA, &ip_info));
+    printf("IP Address:  %s\n", ip4addr_ntoa(&ip_info.ip));
+    printf("Subnet mask: %s\n", ip4addr_ntoa(&ip_info.netmask));
+    printf("Gateway:     %s\n", ip4addr_ntoa(&ip_info.gw)); 
+    xTaskCreatePinnedToCore(&http_server_sta, "http_server_sta", 2048, NULL, 5, NULL,0);
+    //Create Websocket Server Task
+    xTaskCreatePinnedToCore(&ws_server, "ws_server", 2048, NULL, 5, NULL,0);
+    
+
+    xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
+    xTaskCreatePinnedToCore(&rx_task, "uart_rx_task", 2048, &BMS, 5, NULL,1);
+    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,5,NULL,1);
+   
+
 }
 
 void app_main(void)
@@ -470,33 +483,12 @@ void app_main(void)
 
     esp_log_level_set("wifi", ESP_LOG_NONE);
 
-    //nvs_flash_init();
-    //initialise_wifi();
     uart_init();
     can_init();
     wifi_manager_start();
     wifi_manager_set_callback(EVENT_STA_GOT_IP, &cb_connection_ok);
-    // wait for connection
-    printf("Waiting for connection to the wifi network...\n ");
-   // xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE, portMAX_DELAY);
-    //printf("Connected\n\n");
-    
-    // print the local IP address
-    tcpip_adapter_ip_info_t ip_info;
-    ESP_ERROR_CHECK(tcpip_adapter_get_ip_info(TCPIP_ADAPTER_IF_STA, &ip_info));
-    printf("IP Address:  %s\n", ip4addr_ntoa(&ip_info.ip));
-    printf("Subnet mask: %s\n", ip4addr_ntoa(&ip_info.netmask));
-    printf("Gateway:     %s\n", ip4addr_ntoa(&ip_info.gw)); 
-    
-    // start the HTTP Server task
-    xTaskCreatePinnedToCore(&http_server_sta, "http_server_sta", 2048, NULL, 5, NULL,0);
-    //Create Websocket Server Task
-    xTaskCreatePinnedToCore(&ws_server, "ws_server", 2048, NULL, 5, NULL,0);
-    
 
-    xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(&rx_task, "uart_rx_task", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,5,NULL,1);
+    // start the HTTP Server task
 
 
 
