@@ -48,6 +48,7 @@
 #define CAN_TXD_PIN 21
 #define CAN_RXD_PIN 22
 
+
 typedef enum state
 {
     HARDWARE= 0,
@@ -65,6 +66,7 @@ typedef struct
 }bms_data_t;
 
 uint8_t tx_flag = 0;
+uint8_t over_temp = 0;
 
 const static char http_html_hdr[] = "HTTP/1.1 200 OK\nContent-type: text/html\n\n";
 extern const uint8_t webpage_html_start[] asm("_binary_webpage_html_start");
@@ -180,7 +182,7 @@ static void rx_task(bms_data_t* BMS)
             sendData(cell_data,tx_flag);
         }
 
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
+        //vTaskDelay(2000 / portTICK_PERIOD_MS);
 
         int rxbytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
         if(rxbytes == 34)
@@ -188,7 +190,16 @@ static void rx_task(bms_data_t* BMS)
             BMS->total_voltage = ((float)(((data[4]<<8) | data[5])*10)/1000);
             BMS->current = ((float)(((data[6]<<8) | data[7])*10)/1000);
             BMS->temp = data[30]*0.2;
-            
+            if(BMS->temp > 50.0)
+            {
+                over_temp = 1;
+                BMS->chrg_mode = 0x64;
+            }
+            else 
+            {
+                over_temp = 0;
+            }
+
             printf("%f V\n",BMS->total_voltage);
             printf("%f C\n", BMS->temp );
             printf("%f A\n", BMS->current );
@@ -228,7 +239,7 @@ static void rx_task(bms_data_t* BMS)
             printf("%s\n",".");
             tx_flag = 0;
         }
-        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
     free(data);
 }
@@ -262,7 +273,7 @@ static void can_task(bms_data_t* BMS)
         message.data[3] = message.data[3] | raw_total_current;//LOW BYTE
         message.data[4] = raw_temp;
         message.data[5] = BMS->chrg_mode;
-        if (can_transmit(&message, portMAX_DELAY) == ESP_OK) 
+        if (can_transmit(&message, pdMS_TO_TICKS(10000)) == ESP_OK) 
         {
             printf("%s\n","Message queued for CAN transmission");
         }
@@ -271,7 +282,7 @@ static void can_task(bms_data_t* BMS)
             printf("%s\n","Failed to queue message for CANN transmission");
        
         }
-    vTaskDelay(3000/portTICK_PERIOD_MS);
+    vTaskDelay(50/portTICK_PERIOD_MS);
     }
 }
 
@@ -311,7 +322,15 @@ void task_process_WebSocket(bms_data_t* BMS)
             }
             else if(strcmp("fast", __RX_frame.payload)==0)
             {
-                BMS->chrg_mode = 0x96;
+                if(over_temp == 0)
+                {
+                    BMS->chrg_mode = 0x96;
+                }
+                else
+                {
+                    BMS->chrg_mode = 0x64;
+                }
+                
             }
 
             if (__RX_frame.payload != NULL)
@@ -330,7 +349,7 @@ void task_process_WebSocket(bms_data_t* BMS)
         WS_write_data(current_str,strlen(current_str));
         WS_write_data(temp_str,strlen(temp_str));
 
-        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
 
     }
 }
@@ -471,7 +490,7 @@ void cb_connection_ok(void *pvParameter){
 
     xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
     xTaskCreatePinnedToCore(&rx_task, "uart_rx_task", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,5,NULL,1);
+    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,6,NULL,1);
    
 
 }
