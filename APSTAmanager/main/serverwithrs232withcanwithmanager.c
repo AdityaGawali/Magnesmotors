@@ -40,13 +40,12 @@
 
 
 
-#define SSID "SSID"
-#define PASSWORD "PASSWD"
 
 #define RS232_TXD_PIN 18
 #define RS232_RXD_PIN 19
 #define CAN_TXD_PIN 21
 #define CAN_RXD_PIN 22
+#define LED_PIN 23
 
 
 typedef enum state
@@ -72,7 +71,6 @@ const static char http_html_hdr[] = "HTTP/1.1 200 OK\nContent-type: text/html\n\
 extern const uint8_t webpage_html_start[] asm("_binary_webpage_html_start");
 extern const uint8_t webpage_html_end[]   asm("_binary_webpage_html_end");
 
-uint8_t* mac_address = NULL;
 
 //WebSocket frame receive queue
 QueueHandle_t WebSocket_rx_queue;
@@ -254,7 +252,6 @@ static void can_task(bms_data_t* BMS)
 
      while(1)
     {
-        
         raw_total_voltage = (BMS->total_voltage*100);
         raw_total_current = (BMS->current*100);
         raw_temp = (BMS->temp/0.2);
@@ -283,6 +280,9 @@ static void can_task(bms_data_t* BMS)
        
         }
     vTaskDelay(50/portTICK_PERIOD_MS);
+    //diff = xTaskGetTickCount() - start;
+    //start = xTaskGetTickCount();
+    //printf("%d",diff);
     }
 }
 
@@ -293,7 +293,6 @@ void task_process_WebSocket(bms_data_t* BMS)
 
     //frame buffer
     WebSocket_frame_t __RX_frame;
-    char* data_buf;
 
     //create WebSocket RX Queue
     WebSocket_rx_queue = xQueueCreate(10,sizeof(WebSocket_frame_t));
@@ -301,7 +300,6 @@ void task_process_WebSocket(bms_data_t* BMS)
     char* total_voltage_str = (char*)malloc(12);
     char* current_str = (char*)malloc(12);
     char* temp_str = (char*)malloc(12);
-    char* chargingMode_str = (char*)malloc(12);
 
 
     while (1){
@@ -378,7 +376,6 @@ static esp_err_t event_handler(void *ctx, system_event_t *event)
         xEventGroupSetBits(wifi_event_group, IPV6_GOTIP_BIT);
         
 
-        char *ip6 = ip6addr_ntoa(&event->event_info.got_ip6.ip6_info.ip);
         
     default:
         break;
@@ -445,41 +442,14 @@ static void http_server_sta(void *pvParameters) {
     printf("\n");
 }
 
-static void initialise_wifi(void)
-{   
-    
-    tcpip_adapter_init();
-    wifi_event_group = xEventGroupCreate();
-    ESP_ERROR_CHECK( esp_event_loop_init(event_handler, NULL) );
 
-    tcpip_adapter_ip_info_t ipInfo;
-    tcpip_adapter_dhcpc_stop(TCPIP_ADAPTER_IF_STA);
-    ip4addr_aton("192.168.0.123", &ipInfo.ip);
-    ip4addr_aton("192.168.0.1", &ipInfo.gw);
-    ip4addr_aton("255.255.255.0", &ipInfo.netmask);
-
-    ESP_ERROR_CHECK(tcpip_adapter_set_ip_info(TCPIP_ADAPTER_IF_STA, &ipInfo));
-
-
-    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
-    wifi_config_t wifi_config = {
-        .sta = {
-            .ssid = SSID,
-            .password = PASSWORD,
-        },
-    };
-    ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
-    ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
-    ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
-    ESP_ERROR_CHECK( esp_wifi_start() );
-    
-}
 bms_data_t* BMS;
 void cb_connection_ok(void *pvParameter){
 	ESP_LOGI(TAG, "I have a connection!");
 	tcpip_adapter_ip_info_t ip_info;
     ESP_ERROR_CHECK(tcpip_adapter_get_ip_info(TCPIP_ADAPTER_IF_STA, &ip_info));
+    
+    gpio_set_level(LED_PIN, 1);
     printf("IP Address:  %s\n", ip4addr_ntoa(&ip_info.ip));
     printf("Subnet mask: %s\n", ip4addr_ntoa(&ip_info.netmask));
     printf("Gateway:     %s\n", ip4addr_ntoa(&ip_info.gw)); 
@@ -489,25 +459,35 @@ void cb_connection_ok(void *pvParameter){
     
 
     xTaskCreatePinnedToCore(&task_process_WebSocket, "ws_process_rx", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(&rx_task, "uart_rx_task", 2048, &BMS, 5, NULL,1);
-    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,6,NULL,1);
+    xTaskCreatePinnedToCore(&rx_task, "uart_rx_task", 2048, &BMS, 6, NULL,1);
+    xTaskCreatePinnedToCore(&can_task,"can_tx_task",2048,&BMS,5,NULL,1);
    
 
+}
+
+void cb_connection_gone(void *pvParameter)
+{
+    gpio_set_level(LED_PIN, 0);
+   
 }
 
 void app_main(void)
 {
 
-    bms_data_t* BMS;
 
     esp_log_level_set("wifi", ESP_LOG_NONE);
 
     uart_init();
     can_init();
+    gpio_pad_select_gpio(LED_PIN);
+    gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(LED_PIN, 0);
+
     wifi_manager_start();
     wifi_manager_set_callback(EVENT_STA_GOT_IP, &cb_connection_ok);
+    wifi_manager_set_callback(EVENT_STA_DISCONNECTED, &cb_connection_gone);
 
-    // start the HTTP Server task
+
 
 
 
