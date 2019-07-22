@@ -1,7 +1,7 @@
 spi_flash_rom_patch.o: \
  /home/aditya/esp/esp-idf/components/spi_flash/spi_flash_rom_patch.c \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h \
@@ -12,7 +12,7 @@ spi_flash_rom_patch.o: \
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
 

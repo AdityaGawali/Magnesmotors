@@ -20,7 +20,7 @@ tasks.o: /home/aditya/esp/esp-idf/components/freertos/tasks.c \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/esp_debug_helpers.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
@@ -119,7 +119,7 @@ tasks.o: /home/aditya/esp/esp-idf/components/freertos/tasks.c \
 
 /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/esp_newlib.h:
 

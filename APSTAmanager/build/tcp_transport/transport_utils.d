@@ -25,7 +25,7 @@ transport_utils.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/tcp_transport/include/esp_transport_utils.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/sys/time.h \
@@ -81,7 +81,7 @@ transport_utils.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

@@ -4,7 +4,7 @@ esp32/rtc_pm.o: /home/aditya/esp/esp-idf/components/soc/esp32/rtc_pm.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/features.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -37,7 +37,7 @@ esp32/rtc_pm.o: /home/aditya/esp/esp-idf/components/soc/esp32/rtc_pm.c \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h:
 

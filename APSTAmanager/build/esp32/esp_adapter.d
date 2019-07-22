@@ -23,7 +23,7 @@ esp_adapter.o: /home/aditya/esp/esp-idf/components/esp32/esp_adapter.c \
  /home/aditya/esp/esp-idf/components/newlib/include/string.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
@@ -194,7 +194,7 @@ esp_adapter.o: /home/aditya/esp/esp-idf/components/esp32/esp_adapter.c \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

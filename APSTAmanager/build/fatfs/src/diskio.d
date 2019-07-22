@@ -31,7 +31,7 @@ src/diskio.o: /home/aditya/esp/esp-idf/components/fatfs/src/diskio.c \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
@@ -154,7 +154,7 @@ src/diskio.o: /home/aditya/esp/esp-idf/components/fatfs/src/diskio.c \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h:
 

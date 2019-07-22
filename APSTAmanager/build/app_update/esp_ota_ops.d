@@ -26,7 +26,7 @@ esp_ota_ops.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/string.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -140,7 +140,7 @@ esp_ota_ops.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

@@ -22,7 +22,7 @@ pm_esp32.o: /home/aditya/esp/esp-idf/components/esp32/pm_esp32.c \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/param.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -141,7 +141,7 @@ pm_esp32.o: /home/aditya/esp/esp-idf/components/esp32/pm_esp32.c \
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h:
 

@@ -19,7 +19,7 @@ src/wps/wps_enrollee.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/include/wpa/includes.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/include/wpa/common.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/port/include/os.h \
@@ -96,7 +96,7 @@ src/wps/wps_enrollee.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/include/alloca.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/wpa_supplicant/include/wpa/includes.h:
 

@@ -28,7 +28,7 @@ src/pm_locks.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp32/pm.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
@@ -122,7 +122,7 @@ src/pm_locks.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

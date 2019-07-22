@@ -15,7 +15,7 @@ heap_caps.o: /home/aditya/esp/esp-idf/components/heap/heap_caps.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
@@ -101,7 +101,7 @@ heap_caps.o: /home/aditya/esp/esp-idf/components/heap/heap_caps.c \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h:
 

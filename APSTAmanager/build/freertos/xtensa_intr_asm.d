@@ -14,7 +14,7 @@ xtensa_intr_asm.o: \
  /home/aditya/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h
 
@@ -46,7 +46,7 @@ xtensa_intr_asm.o: \
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

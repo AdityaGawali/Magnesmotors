@@ -30,7 +30,7 @@ src/wpa2/utils/base64.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/include/wpa2/utils/base64.h
@@ -95,7 +95,7 @@ src/wpa2/utils/base64.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

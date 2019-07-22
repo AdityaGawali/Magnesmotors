@@ -38,7 +38,7 @@ nghttp2/lib/nghttp2_outbound_item.o: \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h
 
 /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h:
@@ -117,7 +117,7 @@ nghttp2/lib/nghttp2_outbound_item.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.c:

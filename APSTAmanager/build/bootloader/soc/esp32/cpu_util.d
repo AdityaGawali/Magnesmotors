@@ -1,7 +1,7 @@
 esp32/cpu_util.o: \
  /home/aditya/esp/esp-idf/components/soc/esp32/cpu_util.c \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /home/aditya/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -18,7 +18,7 @@ esp32/cpu_util.o: \
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 

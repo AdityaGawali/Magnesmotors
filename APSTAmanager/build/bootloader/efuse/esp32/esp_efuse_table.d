@@ -1,6 +1,6 @@
 esp32/esp_efuse_table.o: \
  /home/aditya/esp/esp-idf/components/efuse/esp32/esp_efuse_table.c \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/efuse/include/esp_efuse.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log.h \
@@ -8,7 +8,7 @@ esp32/esp_efuse_table.o: \
  /home/aditya/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/aditya/esp/esp-idf/components/efuse/esp32/include/esp_efuse_table.h
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/efuse/include/esp_efuse.h:
 

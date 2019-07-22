@@ -1,7 +1,7 @@
 libsodium/src/libsodium/randombytes/randombytes.o: \
  /home/aditya/esp/esp-idf/components/libsodium/libsodium/src/libsodium/randombytes/randombytes.c \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -36,7 +36,7 @@ libsodium/src/libsodium/randombytes/randombytes.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h:
 

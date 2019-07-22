@@ -1,7 +1,7 @@
 esp32/rtc_time.o: \
  /home/aditya/esp/esp-idf/components/soc/esp32/rtc_time.c \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_assert.h \
@@ -15,7 +15,7 @@ esp32/rtc_time.o: \
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/rtc.h:
 

@@ -39,7 +39,7 @@ libcoap/src/coap_event.o: \
  /home/aditya/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_task.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
@@ -198,7 +198,7 @@ libcoap/src/coap_event.o: \
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_task.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 

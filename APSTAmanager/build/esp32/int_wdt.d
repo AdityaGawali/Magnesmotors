@@ -1,5 +1,5 @@
 int_wdt.o: /home/aditya/esp/esp-idf/components/esp32/int_wdt.c \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -76,7 +76,7 @@ int_wdt.o: /home/aditya/esp/esp-idf/components/esp32/int_wdt.c \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_int_wdt.h
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdint.h:
 

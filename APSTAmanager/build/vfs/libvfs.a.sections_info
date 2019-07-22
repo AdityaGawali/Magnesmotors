@@ -1,4 +1,4 @@
-In archive /home/aditya/esp/espcodes/softAP_server/build/vfs/libvfs.a:
+In archive /home/aditya/esp/espcodes/magnes/APSTAmanager/build/vfs/libvfs.a:
 
 vfs_uart.o:     file format elf32-xtensa-le
 
@@ -184,15 +184,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  89 .debug_line   00001202  00000000  00000000  000066b6  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 90 .debug_str    000014d4  00000000  00000000  000078b8  2**0
+ 90 .debug_str    000014da  00000000  00000000  000078b8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 91 .comment      0000003b  00000000  00000000  00008d8c  2**0
+ 91 .comment      0000003b  00000000  00000000  00008d92  2**0
                   CONTENTS, READONLY
- 92 .xtensa.info  00000038  00000000  00000000  00008dc7  2**0
+ 92 .xtensa.info  00000038  00000000  00000000  00008dcd  2**0
                   CONTENTS, READONLY
- 93 .xt.lit       000000d0  00000000  00000000  00008dff  2**0
+ 93 .xt.lit       000000d0  00000000  00000000  00008e05  2**0
                   CONTENTS, RELOC, READONLY
- 94 .xt.prop      0000159c  00000000  00000000  00008ecf  2**0
+ 94 .xt.prop      0000159c  00000000  00000000  00008ed5  2**0
                   CONTENTS, RELOC, READONLY
 
 vfs_semihost.o:     file format elf32-xtensa-le
@@ -249,15 +249,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  24 .debug_line   00000668  00000000  00000000  00002aef  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 25 .debug_str    000008a1  00000000  00000000  00003157  2**0
+ 25 .debug_str    000008a7  00000000  00000000  00003157  2**0
                   CONTENTS, READONLY, DEBUGGING
- 26 .comment      0000003b  00000000  00000000  000039f8  2**0
+ 26 .comment      0000003b  00000000  00000000  000039fe  2**0
                   CONTENTS, READONLY
- 27 .xtensa.info  00000038  00000000  00000000  00003a33  2**0
+ 27 .xtensa.info  00000038  00000000  00000000  00003a39  2**0
                   CONTENTS, READONLY
- 28 .xt.lit       00000038  00000000  00000000  00003a6b  2**0
+ 28 .xt.lit       00000038  00000000  00000000  00003a71  2**0
                   CONTENTS, RELOC, READONLY
- 29 .xt.prop      000002dc  00000000  00000000  00003aa3  2**0
+ 29 .xt.prop      000002dc  00000000  00000000  00003aa9  2**0
                   CONTENTS, RELOC, READONLY
 
 vfs.o:     file format elf32-xtensa-le
@@ -494,13 +494,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
 114 .debug_line   00001e5b  00000000  00000000  00009da2  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-115 .debug_str    00001049  00000000  00000000  0000bbfd  2**0
+115 .debug_str    0000104f  00000000  00000000  0000bbfd  2**0
                   CONTENTS, READONLY, DEBUGGING
-116 .comment      0000003b  00000000  00000000  0000cc46  2**0
+116 .comment      0000003b  00000000  00000000  0000cc4c  2**0
                   CONTENTS, READONLY
-117 .xtensa.info  00000038  00000000  00000000  0000cc81  2**0
+117 .xtensa.info  00000038  00000000  00000000  0000cc87  2**0
                   CONTENTS, READONLY
-118 .xt.lit       00000188  00000000  00000000  0000ccb9  2**0
+118 .xt.lit       00000188  00000000  00000000  0000ccbf  2**0
                   CONTENTS, RELOC, READONLY
-119 .xt.prop      00002028  00000000  00000000  0000ce41  2**0
+119 .xt.prop      00002028  00000000  00000000  0000ce47  2**0
                   CONTENTS, RELOC, READONLY

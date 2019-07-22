@@ -20,7 +20,7 @@ protobuf-c/protobuf-c/protobuf-c.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/aditya/esp/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/newlib/include/limits.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
@@ -66,7 +66,7 @@ protobuf-c/protobuf-c/protobuf-c.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

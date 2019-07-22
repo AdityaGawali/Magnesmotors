@@ -3,7 +3,7 @@ asio/asio/src/asio.o: \
  /home/aditya/esp/esp-idf/components/asio/asio/asio/include/asio/impl/src.hpp \
  /home/aditya/esp/esp-idf/components/asio/asio/asio/include/asio/detail/config.hpp \
  /home/aditya/esp/esp-idf/components/asio/port/include/esp_asio_config.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp \
  /home/aditya/esp/esp-idf/components/asio/asio/asio/include/asio/error.hpp \
  /home/aditya/esp/esp-idf/components/asio/asio/asio/include/asio/error_code.hpp \
@@ -308,7 +308,7 @@ asio/asio/src/asio.o: \
 
 /home/aditya/esp/esp-idf/components/asio/port/include/esp_asio_config.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp:
 

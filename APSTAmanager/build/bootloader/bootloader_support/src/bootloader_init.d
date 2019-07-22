@@ -1,7 +1,7 @@
 src/bootloader_init.o: \
  /home/aditya/esp/esp-idf/components/bootloader_support/src/bootloader_init.c \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -59,7 +59,7 @@ src/bootloader_init.o: \
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/log/include/esp_log.h:
 

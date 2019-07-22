@@ -21,7 +21,7 @@ clk.o: /home/aditya/esp/esp-idf/components/esp32/clk.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
@@ -122,7 +122,7 @@ clk.o: /home/aditya/esp/esp-idf/components/esp32/clk.c \
 
 /home/aditya/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 

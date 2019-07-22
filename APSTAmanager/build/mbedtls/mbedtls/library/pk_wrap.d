@@ -1,7 +1,7 @@
 mbedtls/library/pk_wrap.o: \
  /home/aditya/esp/esp-idf/components/mbedtls/mbedtls/library/pk_wrap.c \
  /home/aditya/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
@@ -49,7 +49,7 @@ mbedtls/library/pk_wrap.o: \
 
 /home/aditya/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 

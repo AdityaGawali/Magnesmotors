@@ -10,7 +10,7 @@ src/ff.o: /home/aditya/esp/esp-idf/components/fatfs/src/ff.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -105,7 +105,7 @@ src/ff.o: /home/aditya/esp/esp-idf/components/fatfs/src/ff.c \
 
 /home/aditya/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

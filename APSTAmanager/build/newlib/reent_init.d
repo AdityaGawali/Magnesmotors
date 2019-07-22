@@ -23,7 +23,7 @@ reent_init.o: /home/aditya/esp/esp-idf/components/newlib/reent_init.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h
 
 /home/aditya/esp/esp-idf/components/newlib/include/string.h:
 
@@ -73,5 +73,5 @@ reent_init.o: /home/aditya/esp/esp-idf/components/newlib/reent_init.c \
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 /home/aditya/esp/esp-idf/components/newlib/./reent_init.c:

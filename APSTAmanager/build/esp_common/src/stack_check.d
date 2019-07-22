@@ -1,6 +1,6 @@
 src/stack_check.o: \
  /home/aditya/esp/esp-idf/components/esp_common/src/stack_check.c \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_system.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -31,7 +31,7 @@ src/stack_check.o: \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_bit_defs.h
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_system.h:
 

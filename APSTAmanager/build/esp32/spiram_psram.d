@@ -1,5 +1,5 @@
 spiram_psram.o: /home/aditya/esp/esp-idf/components/esp32/spiram_psram.c \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/string.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/aditya/esp/esp-idf/components/newlib/include/newlib.h \
@@ -78,7 +78,7 @@ spiram_psram.o: /home/aditya/esp/esp-idf/components/esp32/spiram_psram.c \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  /home/aditya/esp/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/string.h:
 

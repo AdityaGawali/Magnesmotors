@@ -1,6 +1,6 @@
 pm_trace.o: /home/aditya/esp/esp-idf/components/esp32/pm_trace.c \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_private/pm_trace.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/driver/include/driver/gpio.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
@@ -54,7 +54,7 @@ pm_trace.o: /home/aditya/esp/esp-idf/components/esp32/pm_trace.c \
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_private/pm_trace.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/driver/include/driver/gpio.h:
 

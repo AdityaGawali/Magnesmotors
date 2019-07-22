@@ -16,7 +16,7 @@ locks.o: /home/aditya/esp/esp-idf/components/newlib/locks.c \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -98,7 +98,7 @@ locks.o: /home/aditya/esp/esp-idf/components/newlib/locks.c \
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 

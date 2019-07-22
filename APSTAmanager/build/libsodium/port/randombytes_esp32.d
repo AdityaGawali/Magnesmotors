@@ -27,7 +27,7 @@ port/randombytes_esp32.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
@@ -89,7 +89,7 @@ port/randombytes_esp32.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h:
 

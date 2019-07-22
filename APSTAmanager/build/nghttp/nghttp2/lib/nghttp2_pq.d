@@ -33,7 +33,7 @@ nghttp2/lib/nghttp2_pq.o: \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h
 
@@ -103,7 +103,7 @@ nghttp2/lib/nghttp2_pq.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

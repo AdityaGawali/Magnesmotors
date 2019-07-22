@@ -41,7 +41,7 @@ nghttp2/lib/nghttp2_stream.o: \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/assert.h \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h \
  /home/aditya/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h \
@@ -130,7 +130,7 @@ nghttp2/lib/nghttp2_stream.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/assert.h:
 

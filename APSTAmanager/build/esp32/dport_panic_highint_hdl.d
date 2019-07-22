@@ -14,7 +14,7 @@ dport_panic_highint_hdl.o: \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/esp_private/panic_reason.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
@@ -48,7 +48,7 @@ dport_panic_highint_hdl.o: \
 
 /home/aditya/esp/esp-idf/components/xtensa/include/esp_private/panic_reason.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 

@@ -136,15 +136,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  65 .debug_line   00000ee1  00000000  00000000  00004723  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 66 .debug_str    00001147  00000000  00000000  00005604  2**0
+ 66 .debug_str    0000114d  00000000  00000000  00005604  2**0
                   CONTENTS, READONLY, DEBUGGING
- 67 .comment      0000003b  00000000  00000000  0000674b  2**0
+ 67 .comment      0000003b  00000000  00000000  00006751  2**0
                   CONTENTS, READONLY
- 68 .xtensa.info  00000038  00000000  00000000  00006786  2**0
+ 68 .xtensa.info  00000038  00000000  00000000  0000678c  2**0
                   CONTENTS, READONLY
- 69 .xt.lit       000000b8  00000000  00000000  000067be  2**0
+ 69 .xt.lit       000000b8  00000000  00000000  000067c4  2**0
                   CONTENTS, RELOC, READONLY
- 70 .xt.prop      00000e1c  00000000  00000000  00006876  2**0
+ 70 .xt.prop      00000e1c  00000000  00000000  0000687c  2**0
                   CONTENTS, RELOC, READONLY
 
 esp_app_desc.o:     file format elf32-xtensa-le

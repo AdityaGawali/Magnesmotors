@@ -27,7 +27,7 @@ poll.o: /home/aditya/esp/esp-idf/components/newlib/poll.c \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/aditya/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -132,7 +132,7 @@ poll.o: /home/aditya/esp/esp-idf/components/newlib/poll.c \
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

@@ -22,7 +22,7 @@ bt.o: /home/aditya/esp/esp-idf/components/bt/bt.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/include/string.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -140,7 +140,7 @@ bt.o: /home/aditya/esp/esp-idf/components/bt/bt.c \
 
 /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/heap/include/esp_heap_caps.h:
 

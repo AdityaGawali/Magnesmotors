@@ -1,4 +1,5 @@
-dns_server.o: /home/aditya/esp/espcodes/softAP_server/main/dns_server.c \
+dns_server.o: \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/dns_server.c \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h \
  /home/aditya/esp/esp-idf/components/lwip/port/esp32/include/lwipopts.h \
@@ -35,7 +36,7 @@ dns_server.o: /home/aditya/esp/espcodes/softAP_server/main/dns_server.c \
  /home/aditya/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_task.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
@@ -128,8 +129,8 @@ dns_server.o: /home/aditya/esp/espcodes/softAP_server/main/dns_server.c \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/dns.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/endian.h \
- /home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h \
- /home/aditya/esp/espcodes/softAP_server/main/dns_server.h
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/dns_server.h
 
 /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:
 
@@ -203,7 +204,7 @@ dns_server.o: /home/aditya/esp/espcodes/softAP_server/main/dns_server.c \
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_task.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -389,7 +390,7 @@ dns_server.o: /home/aditya/esp/espcodes/softAP_server/main/dns_server.c \
 
 /home/aditya/esp/esp-idf/components/newlib/include/machine/endian.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/dns_server.h:
-/home/aditya/esp/espcodes/softAP_server/main/./dns_server.c:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/dns_server.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/./dns_server.c:

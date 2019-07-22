@@ -1,4 +1,4 @@
-In archive /home/aditya/esp/espcodes/softAP_server/build/mdns/libmdns.a:
+In archive /home/aditya/esp/espcodes/magnes/APSTAmanager/build/mdns/libmdns.a:
 
 mdns_console.o:     file format elf32-xtensa-le
 
@@ -286,15 +286,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
 140 .debug_line   000013eb  00000000  00000000  000095b6  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-141 .debug_str    000010e5  00000000  00000000  0000a9a1  2**0
+141 .debug_str    000010eb  00000000  00000000  0000a9a1  2**0
                   CONTENTS, READONLY, DEBUGGING
-142 .comment      0000003b  00000000  00000000  0000ba86  2**0
+142 .comment      0000003b  00000000  00000000  0000ba8c  2**0
                   CONTENTS, READONLY
-143 .xtensa.info  00000038  00000000  00000000  0000bac1  2**0
+143 .xtensa.info  00000038  00000000  00000000  0000bac7  2**0
                   CONTENTS, READONLY
-144 .xt.lit       00000148  00000000  00000000  0000baf9  2**0
+144 .xt.lit       00000148  00000000  00000000  0000baff  2**0
                   CONTENTS, RELOC, READONLY
-145 .xt.prop      00001248  00000000  00000000  0000bc41  2**0
+145 .xt.prop      00001248  00000000  00000000  0000bc47  2**0
                   CONTENTS, RELOC, READONLY
 
 mdns_networking.o:     file format elf32-xtensa-le
@@ -379,15 +379,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  38 .debug_line   0000096e  00000000  00000000  00002c38  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 39 .debug_str    00000ec3  00000000  00000000  000035a6  2**0
+ 39 .debug_str    00000ec9  00000000  00000000  000035a6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 40 .comment      0000003b  00000000  00000000  00004469  2**0
+ 40 .comment      0000003b  00000000  00000000  0000446f  2**0
                   CONTENTS, READONLY
- 41 .xtensa.info  00000038  00000000  00000000  000044a4  2**0
+ 41 .xtensa.info  00000038  00000000  00000000  000044aa  2**0
                   CONTENTS, READONLY
- 42 .xt.lit       00000068  00000000  00000000  000044dc  2**0
+ 42 .xt.lit       00000068  00000000  00000000  000044e2  2**0
                   CONTENTS, RELOC, READONLY
- 43 .xt.prop      00000564  00000000  00000000  00004544  2**0
+ 43 .xt.prop      00000564  00000000  00000000  0000454a  2**0
                   CONTENTS, RELOC, READONLY
 
 mdns.o:     file format elf32-xtensa-le
@@ -900,13 +900,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
 252 .debug_line   00006255  00000000  00000000  00020ae7  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-253 .debug_str    00002b52  00000000  00000000  00026d3c  2**0
+253 .debug_str    00002b58  00000000  00000000  00026d3c  2**0
                   CONTENTS, READONLY, DEBUGGING
-254 .comment      0000003b  00000000  00000000  0002988e  2**0
+254 .comment      0000003b  00000000  00000000  00029894  2**0
                   CONTENTS, READONLY
-255 .xtensa.info  00000038  00000000  00000000  000298c9  2**0
+255 .xtensa.info  00000038  00000000  00000000  000298cf  2**0
                   CONTENTS, READONLY
-256 .xt.lit       00000380  00000000  00000000  00029901  2**0
+256 .xt.lit       00000380  00000000  00000000  00029907  2**0
                   CONTENTS, RELOC, READONLY
-257 .xt.prop      000066c0  00000000  00000000  00029c81  2**0
+257 .xt.prop      000066c0  00000000  00000000  00029c87  2**0
                   CONTENTS, RELOC, READONLY

@@ -1,6 +1,6 @@
 src/secure_boot_signatures.o: \
  /home/aditya/esp/esp-idf/components/bootloader_support/src/secure_boot_signatures.c \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -55,7 +55,7 @@ src/secure_boot_signatures.o: \
  /home/aditya/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
  /home/aditya/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
 

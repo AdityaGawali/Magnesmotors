@@ -20,7 +20,7 @@ src/crypto/bignum.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h \
  /home/aditya/esp/esp-idf/components/wpa_supplicant/port/include/os.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_types.h \
@@ -83,7 +83,7 @@ src/crypto/bignum.o: \
 
 /home/aditya/esp/esp-idf/components/newlib/include/alloca.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/wpa_supplicant/include/crypto/common.h:
 

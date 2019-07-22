@@ -1,5 +1,5 @@
 termios.o: /home/aditya/esp/esp-idf/components/newlib/termios.c \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/sys/termios.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -19,7 +19,7 @@ termios.o: /home/aditya/esp/esp-idf/components/newlib/termios.c \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/reent.h
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/sys/termios.h:
 

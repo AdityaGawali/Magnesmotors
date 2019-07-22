@@ -1,6 +1,6 @@
 esp32/rtc_clk.o: /home/aditya/esp/esp-idf/components/soc/esp32/rtc_clk.c \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -43,7 +43,7 @@ esp32/rtc_clk.o: /home/aditya/esp/esp-idf/components/soc/esp32/rtc_clk.c \
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h:
 

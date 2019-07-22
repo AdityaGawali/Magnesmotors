@@ -8,7 +8,7 @@ library/ssl_stack.o: \
  /home/aditya/esp/esp-idf/components/openssl/include/internal/x509_vfy.h \
  /home/aditya/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
  /home/aditya/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_types.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/cdefs.h \
@@ -54,7 +54,7 @@ library/ssl_stack.o: \
 
 /home/aditya/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 

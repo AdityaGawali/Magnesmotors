@@ -1,4 +1,4 @@
-In archive /home/aditya/esp/espcodes/softAP_server/build/app_trace/libapp_trace.a:
+In archive /home/aditya/esp/espcodes/magnes/APSTAmanager/build/app_trace/libapp_trace.a:
 
 app_trace_util.o:     file format elf32-xtensa-le
 
@@ -44,15 +44,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  19 .debug_line   000004a2  00000000  00000000  00000e0a  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 20 .debug_str    00000391  00000000  00000000  000012ac  2**0
+ 20 .debug_str    00000397  00000000  00000000  000012ac  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .comment      0000003b  00000000  00000000  0000163d  2**0
+ 21 .comment      0000003b  00000000  00000000  00001643  2**0
                   CONTENTS, READONLY
- 22 .xtensa.info  00000038  00000000  00000000  00001678  2**0
+ 22 .xtensa.info  00000038  00000000  00000000  0000167e  2**0
                   CONTENTS, READONLY
- 23 .xt.lit       00000018  00000000  00000000  000016b0  2**0
+ 23 .xt.lit       00000018  00000000  00000000  000016b6  2**0
                   CONTENTS, RELOC, READONLY
- 24 .xt.prop      000002d0  00000000  00000000  000016c8  2**0
+ 24 .xt.prop      000002d0  00000000  00000000  000016ce  2**0
                   CONTENTS, RELOC, READONLY
 
 host_file_io.o:     file format elf32-xtensa-le
@@ -73,11 +73,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
   6 .debug_line   0000001d  00000000  00000000  000000e4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_str    00000176  00000000  00000000  00000101  2**0
+  7 .debug_str    0000017c  00000000  00000000  00000101  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .comment      0000003b  00000000  00000000  00000277  2**0
+  8 .comment      0000003b  00000000  00000000  0000027d  2**0
                   CONTENTS, READONLY
-  9 .xtensa.info  00000038  00000000  00000000  000002b2  2**0
+  9 .xtensa.info  00000038  00000000  00000000  000002b8  2**0
                   CONTENTS, READONLY
 
 app_trace.o:     file format elf32-xtensa-le
@@ -98,11 +98,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
   6 .debug_line   0000001d  00000000  00000000  000000e4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_str    00000173  00000000  00000000  00000101  2**0
+  7 .debug_str    00000179  00000000  00000000  00000101  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .comment      0000003b  00000000  00000000  00000274  2**0
+  8 .comment      0000003b  00000000  00000000  0000027a  2**0
                   CONTENTS, READONLY
-  9 .xtensa.info  00000038  00000000  00000000  000002af  2**0
+  9 .xtensa.info  00000038  00000000  00000000  000002b5  2**0
                   CONTENTS, READONLY
 
 heap_trace_tohost.o:     file format elf32-xtensa-le
@@ -123,11 +123,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
   6 .debug_line   0000001d  00000000  00000000  000000e4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_str    0000017b  00000000  00000000  00000101  2**0
+  7 .debug_str    00000181  00000000  00000000  00000101  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .comment      0000003b  00000000  00000000  0000027c  2**0
+  8 .comment      0000003b  00000000  00000000  00000282  2**0
                   CONTENTS, READONLY
-  9 .xtensa.info  00000038  00000000  00000000  000002b7  2**0
+  9 .xtensa.info  00000038  00000000  00000000  000002bd  2**0
                   CONTENTS, READONLY
 
 gcov_rtio.o:     file format elf32-xtensa-le
@@ -148,9 +148,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
   6 .debug_line   0000001d  00000000  00000000  000000e4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_str    00000178  00000000  00000000  00000101  2**0
+  7 .debug_str    0000017e  00000000  00000000  00000101  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .comment      0000003b  00000000  00000000  00000279  2**0
+  8 .comment      0000003b  00000000  00000000  0000027f  2**0
                   CONTENTS, READONLY
-  9 .xtensa.info  00000038  00000000  00000000  000002b4  2**0
+  9 .xtensa.info  00000038  00000000  00000000  000002ba  2**0
                   CONTENTS, READONLY

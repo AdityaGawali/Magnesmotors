@@ -1,4 +1,5 @@
-http_server.o: /home/aditya/esp/espcodes/softAP_server/main/http_server.c \
+http_server.o: \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.c \
  /home/aditya/esp/esp-idf/components/newlib/include/stdio.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/aditya/esp/esp-idf/components/newlib/include/newlib.h \
@@ -26,7 +27,7 @@ http_server.o: /home/aditya/esp/espcodes/softAP_server/main/http_server.c \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/aditya/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -169,8 +170,8 @@ http_server.o: /home/aditya/esp/espcodes/softAP_server/main/http_server.c \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/icmp6.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/icmp6.h \
  /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/tcp.h \
- /home/aditya/esp/espcodes/softAP_server/main/http_server.h \
- /home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -226,7 +227,7 @@ http_server.o: /home/aditya/esp/espcodes/softAP_server/main/http_server.c \
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -512,7 +513,7 @@ http_server.o: /home/aditya/esp/espcodes/softAP_server/main/http_server.c \
 
 /home/aditya/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/tcp.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/http_server.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/http_server.h:
 
-/home/aditya/esp/espcodes/softAP_server/main/wifi_manager.h:
-/home/aditya/esp/espcodes/softAP_server/main/./http_server.c:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/wifi_manager.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/main/./http_server.c:

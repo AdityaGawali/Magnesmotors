@@ -1,6 +1,6 @@
 src/bootloader_common.o: \
  /home/aditya/esp/esp-idf/components/bootloader_support/src/bootloader_common.c \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
@@ -28,7 +28,7 @@ src/bootloader_common.o: \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/aditya/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h:
 

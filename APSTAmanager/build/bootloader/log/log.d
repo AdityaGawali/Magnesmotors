@@ -1,6 +1,6 @@
 log.o: /home/aditya/esp/esp-idf/components/log/log.c \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_assert.h \
@@ -12,7 +12,7 @@ log.o: /home/aditya/esp/esp-idf/components/log/log.c \
 
 /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/xtensa/include/xtensa/hal.h:
 

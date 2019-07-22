@@ -20,7 +20,7 @@ rtc_module.o: /home/aditya/esp/esp-idf/components/driver/rtc_module.c \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
  /home/aditya/esp/esp-idf/components/newlib/include/ctype.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
@@ -142,7 +142,7 @@ rtc_module.o: /home/aditya/esp/esp-idf/components/driver/rtc_module.c \
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/log/include/esp_log.h:
 

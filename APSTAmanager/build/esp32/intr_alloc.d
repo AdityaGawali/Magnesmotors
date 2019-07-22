@@ -1,5 +1,5 @@
 intr_alloc.o: /home/aditya/esp/esp-idf/components/esp32/intr_alloc.c \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdint.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -67,7 +67,7 @@ intr_alloc.o: /home/aditya/esp/esp-idf/components/esp32/intr_alloc.c \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_ipc.h
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdint.h:
 

@@ -8,7 +8,7 @@ esp32/rtc_wdt.o: /home/aditya/esp/esp-idf/components/soc/esp32/rtc_wdt.c \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_assert.h \
  /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/aditya/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -52,7 +52,7 @@ esp32/rtc_wdt.o: /home/aditya/esp/esp-idf/components/soc/esp32/rtc_wdt.c \
 
 /home/aditya/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h:
 

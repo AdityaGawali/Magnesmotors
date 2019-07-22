@@ -1,4 +1,4 @@
-In archive /home/aditya/esp/espcodes/softAP_server/build/xtensa/libxtensa.a:
+In archive /home/aditya/esp/espcodes/magnes/APSTAmanager/build/xtensa/libxtensa.a:
 
 eri.o:     file format elf32-xtensa-le
 
@@ -75,13 +75,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  16 .debug_line   000001af  00000000  00000000  00000638  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 17 .debug_str    000002f3  00000000  00000000  000007e7  2**0
+ 17 .debug_str    000002f9  00000000  00000000  000007e7  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .comment      0000003b  00000000  00000000  00000ada  2**0
+ 18 .comment      0000003b  00000000  00000000  00000ae0  2**0
                   CONTENTS, READONLY
- 19 .xtensa.info  00000038  00000000  00000000  00000b15  2**0
+ 19 .xtensa.info  00000038  00000000  00000000  00000b1b  2**0
                   CONTENTS, READONLY
- 20 .xt.lit       00000018  00000000  00000000  00000b4d  2**0
+ 20 .xt.lit       00000018  00000000  00000000  00000b53  2**0
                   CONTENTS, RELOC, READONLY
- 21 .xt.prop      00000090  00000000  00000000  00000b65  2**0
+ 21 .xt.prop      00000090  00000000  00000000  00000b6b  2**0
                   CONTENTS, RELOC, READONLY

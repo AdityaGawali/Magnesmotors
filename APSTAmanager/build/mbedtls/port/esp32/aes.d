@@ -17,7 +17,7 @@ port/esp32/aes.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/aditya/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h \
  /home/aditya/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
@@ -114,7 +114,7 @@ port/esp32/aes.o: \
 
 /home/aditya/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/mbedtls/port/include/esp_mem.h:
 

@@ -19,7 +19,7 @@ esp-mqtt/lib/mqtt_msg.o: \
  /home/aditya/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/aditya/esp/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h \
  /home/aditya/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h \
  /home/aditya/esp/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h \
  /home/aditya/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -153,7 +153,7 @@ esp-mqtt/lib/mqtt_msg.o: \
 
 /home/aditya/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h:
 

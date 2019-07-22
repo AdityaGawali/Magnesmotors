@@ -3,7 +3,7 @@ src/flash_partitions.o: \
  /home/aditya/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/aditya/esp/esp-idf/components/esp_common/include/esp_types.h \
- /home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/aditya/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -17,7 +17,7 @@ src/flash_partitions.o: \
 
 /home/aditya/esp/esp-idf/components/esp_common/include/esp_types.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/bootloader/../include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/bootloader/../include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/log/include/esp_log.h:
 

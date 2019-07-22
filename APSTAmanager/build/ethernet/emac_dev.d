@@ -25,7 +25,7 @@ emac_dev.o: /home/aditya/esp/esp-idf/components/ethernet/emac_dev.c \
  /home/aditya/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/aditya/esp/esp-idf/components/newlib/include/alloca.h \
- /home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h \
+ /home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h \
  /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
  /home/aditya/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/aditya/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
@@ -122,7 +122,7 @@ emac_dev.o: /home/aditya/esp/esp-idf/components/ethernet/emac_dev.c \
 
 /home/aditya/esp/esp-idf/components/newlib/include/alloca.h:
 
-/home/aditya/esp/espcodes/softAP_server/build/include/sdkconfig.h:
+/home/aditya/esp/espcodes/magnes/APSTAmanager/build/include/sdkconfig.h:
 
 /home/aditya/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
 

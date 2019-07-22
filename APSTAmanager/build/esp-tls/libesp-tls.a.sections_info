@@ -1,4 +1,4 @@
-In archive /home/aditya/esp/espcodes/softAP_server/build/esp-tls/libesp-tls.a:
+In archive /home/aditya/esp/espcodes/magnes/APSTAmanager/build/esp-tls/libesp-tls.a:
 
 esp_tls.o:     file format elf32-xtensa-le
 
@@ -116,13 +116,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
  55 .debug_line   00000e54  00000000  00000000  00005d14  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 56 .debug_str    00001960  00000000  00000000  00006b68  2**0
+ 56 .debug_str    00001966  00000000  00000000  00006b68  2**0
                   CONTENTS, READONLY, DEBUGGING
- 57 .comment      0000003b  00000000  00000000  000084c8  2**0
+ 57 .comment      0000003b  00000000  00000000  000084ce  2**0
                   CONTENTS, READONLY
- 58 .xtensa.info  00000038  00000000  00000000  00008503  2**0
+ 58 .xtensa.info  00000038  00000000  00000000  00008509  2**0
                   CONTENTS, READONLY
- 59 .xt.lit       000000b0  00000000  00000000  0000853b  2**0
+ 59 .xt.lit       000000b0  00000000  00000000  00008541  2**0
                   CONTENTS, RELOC, READONLY
- 60 .xt.prop      0000099c  00000000  00000000  000085eb  2**0
+ 60 .xt.prop      0000099c  00000000  00000000  000085f1  2**0
                   CONTENTS, RELOC, READONLY
