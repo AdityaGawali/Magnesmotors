@@ -45,7 +45,7 @@
 #define RS232_RXD_PIN 19
 #define CAN_TXD_PIN 21
 #define CAN_RXD_PIN 22
-#define LED_PIN 23
+#define LED_PIN 32 //Active Low
 
 
 typedef enum state
@@ -449,7 +449,7 @@ void cb_connection_ok(void *pvParameter){
 	tcpip_adapter_ip_info_t ip_info;
     ESP_ERROR_CHECK(tcpip_adapter_get_ip_info(TCPIP_ADAPTER_IF_STA, &ip_info));
     
-    gpio_set_level(LED_PIN, 1);
+    gpio_set_level(LED_PIN, 0);
     printf("IP Address:  %s\n", ip4addr_ntoa(&ip_info.ip));
     printf("Subnet mask: %s\n", ip4addr_ntoa(&ip_info.netmask));
     printf("Gateway:     %s\n", ip4addr_ntoa(&ip_info.gw)); 
@@ -467,7 +467,7 @@ void cb_connection_ok(void *pvParameter){
 
 void cb_connection_gone(void *pvParameter)
 {
-    gpio_set_level(LED_PIN, 0);
+    gpio_set_level(LED_PIN, 1);
    
 }
 
@@ -481,7 +481,7 @@ void app_main(void)
     can_init();
     gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_level(LED_PIN, 0);
+    gpio_set_level(LED_PIN, 1);
 
     wifi_manager_start();
     wifi_manager_set_callback(EVENT_STA_GOT_IP, &cb_connection_ok);
